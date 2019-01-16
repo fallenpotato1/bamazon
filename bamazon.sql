@@ -23,5 +23,5 @@ VALUES ("playstation 4", "video games", 199.00, 40),
        ("light bulb", "home", 3.99, 2),
        ("water pipe", "recreation", 40.20, 400);
        
-SELECT item_id, product_name, department_name, price
+SELECT item_id, product_name, department_name, price, stock_quantity
 FROM products;       

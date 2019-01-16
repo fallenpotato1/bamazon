@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "",
+    password: "fallenpotato",
     database: "bamazon"
 })
 
@@ -85,7 +85,14 @@ function addToInventory() {
             {
                 name: "productName",
                 type: "input",
-                message: "Which product would you like to add to?"
+                message: "Which product would you like to add to?",
+                validate: function (input) {
+                    if (isNaN(parseInt(input))) {
+                        return true
+                    } 
+                        console.log("\nYou must provide a number");
+                        return false
+                }
             },
             {
                 name: "productAmount",
